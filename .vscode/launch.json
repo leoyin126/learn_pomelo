@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "WebServer",
+            "program": "${workspaceFolder}\\web-server\\app.js",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "name": "WebClient-launch",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3001/index.html",
+            "webRoot": "${workspaceFolder}/wwwroot"
+        },
+
+        {
+            "name": "WebClient-Attach    to url with files served from ./out",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            //"url": "<url of the open browser tab to connect to>",
+            "url": "http://localhost:3001/index.html",
+            "webRoot": "${workspaceFolder}/out"
+        }
+    ]
+}
